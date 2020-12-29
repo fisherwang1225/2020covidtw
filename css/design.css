@@ -1,0 +1,40 @@
+/*$themecolor:#e9c46a,#2a9d8f,#264653,#f4a261,#e76f51;*/
+
+html{
+    background-color: #2a9d8f;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html h1{
+    color:#264653;
+    font-size: 48px;font-weight: 900;
+}
+
+#leftline{
+    border-right: 0.7em solid #e9c46a;
+    /* Positioned at the left */
+    left: 3em;
+    position: fixed;
+    top: 0px;
+    /* Take full height */
+    height: 100%;
+}
+
+
+header{
+    /* Used to position the left vertical line */
+    position: relative;
+    text-align: 50px;
+    left:100px;
+    width:80%; height: 100vh;
+    display: flex; flex-direction:column; justify-content: space-around;
+}
+header .grid-1{
+    margin-left: 2em;
+    display: flex; align-items: center;
+}
+
+header p{
+    font-size:30px;
+    }
+

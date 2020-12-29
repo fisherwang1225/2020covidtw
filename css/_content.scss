@@ -1,0 +1,104 @@
+
+#content{
+    width: 100%; height: 100vh;
+    padding: 50px 0;
+    display: flex; justify-content: space-between; align-items:center;
+    
+    .countpart{
+        width:50px; 
+        margin: 10px;
+        margin-top: 50px;
+        color:white;
+        text-align:start;
+        writing-mode: vertical-lr;
+
+        span{
+            font-size: 36px;
+            color: #e9c46a;
+            writing-mode: horizontal-tb;
+        }
+    }
+
+        .casepart{ /*不同感染源的排列*/
+            width:80%; height: 100vh;
+            display: flex; flex-direction:column; justify-content: center; align-items: flex-start;
+            
+            .cases{ 
+                border:solid 1px black;
+                display: flex; justify-content: flex-start; align-items: center;
+                
+                .caseabord{
+                    /*padding: 50px 0;*/
+                    border:solid 1px red;
+                    width: 350px; height:100px;
+                    margin:100px -20px 100px -20px;
+                    position:relative;
+                    left:-6em;
+                    display: flex; justify-content: flex-start; align-items: center;
+                    .point{
+                        border-radius: 2px;
+                        width: 30px; height: 30px;
+                        background-color: #e9c46a; 
+                    }
+                    .line{
+                        width: 100px; height:10px;
+                        background-color: #e9c46a;
+                    }
+                    .num{
+                        width: 50px; height: 150px;
+                        font-size: 24px; font-weight: 900;
+                        background-color: #e9c46a;
+                        display:flex;flex-direction: column; justify-content: center;align-items: center;
+                    }
+                    ul{  
+                        width: 150px; height:150px; 
+                        background-color: #e9c46a;
+                        display:flex;flex-direction: column; justify-content: center;align-items: flex-start;
+                        li {
+                            line-height: 1.5;
+                        }
+                    }
+                }
+        
+                .caselocal{
+                    border:solid 1px red;
+                    width: 350px; height:100px;
+                    position:relative;
+                    left:-8em;
+                    display: flex; justify-content: flex-start; align-items: center;
+                    .point{
+                        border-radius: 2px;
+                        width: 30px; height: 30px;
+                        background-color: #f4a261; 
+                    }
+                    .line{
+                        width: 100px; height:10px;
+                        background-color: #f4a261;
+                    }
+                    .num{
+                        width: 50px; height: 150px;
+                        font-size: 24px; font-weight: 900;
+                        background-color: #f4a261;
+                        display:flex;flex-direction: column; justify-content: center;align-items: center;
+                    }
+                    ul{  
+                        width: 150px; height:150px; 
+                        background-color: #f4a261;
+                        display:flex;flex-direction: column; justify-content: center;align-items: flex-start;
+                        li {
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    
+    .weeks{
+        width:100px;
+    }
+
+}
+
+
+
+

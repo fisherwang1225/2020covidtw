@@ -1,0 +1,15 @@
+html{
+    height: 100%;
+    overflow: scroll;
+
+    .week {
+        /* Take full size */
+        height: 100%;
+        width: 100%;
+
+        /* Stick to the top */
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+}
