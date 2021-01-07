@@ -1,7 +1,8 @@
 
 #content{
     width: 100%; height: 100vh;
-    padding: 50px 0;
+    padding: 50px 0; 
+    margin-top: 10px;margin-bottom: 10px;
     display: flex; justify-content: space-between; align-items:center;
     
     .countpart{
@@ -19,21 +20,23 @@
         }
     }
 
-        .casepart{ /*不同感染源的排列*/
-            width:80%; height: 100vh;
-            display: flex; flex-direction:column; justify-content: center; align-items: flex-start;
+    .casepart{ /*不同感染源的排列*/
+        width:80%; height: 100vh;
+        display: flex; flex-direction:column; justify-content: center; align-items: flex-start;
             
-            .cases{ 
-                border:solid 1px black;
-                display: flex; justify-content: flex-start; align-items: center;
+        .cases{ 
+            position:relative;
+            left:-7em;
+            /*border:solid 1px black;*/
+            display: flex; justify-content: flex-start; align-items: center;
                 
                 .caseabord{
                     /*padding: 50px 0;*/
-                    border:solid 1px red;
+                    /*border:solid 1px red;*/
                     width: 350px; height:100px;
-                    margin:100px -20px 100px -20px;
+                    margin:100px 0px 100px 0px;
                     position:relative;
-                    left:-6em;
+                    left:0;
                     display: flex; justify-content: flex-start; align-items: center;
                     .point{
                         border-radius: 2px;
@@ -64,13 +67,13 @@
                     border:solid 1px red;
                     width: 350px; height:100px;
                     position:relative;
-                    left:-8em;
+                    left:-2em;
                     display: flex; justify-content: flex-start; align-items: center;
                     .point{
                         border-radius: 2px;
                         width: 30px; height: 30px;
                         background-color: #f4a261; 
-                    }
+                    }   
                     .line{
                         width: 100px; height:10px;
                         background-color: #f4a261;
@@ -90,12 +93,10 @@
                         }
                     }
                 }
-            }
         }
-    
-    .weeks{
-        width:100px;
     }
+    
+
 
 }
 

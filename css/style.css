@@ -534,6 +534,8 @@ html, body, div, ul, ol, li, h1, h2, h3, h4, p, a {
   width: 100%;
   height: 100vh;
   padding: 50px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -584,7 +586,9 @@ html, body, div, ul, ol, li, h1, h2, h3, h4, p, a {
 }
 
 #content .casepart .cases {
-  border: solid 1px black;
+  position: relative;
+  left: -7em;
+  /*border:solid 1px black;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -598,12 +602,12 @@ html, body, div, ul, ol, li, h1, h2, h3, h4, p, a {
 
 #content .casepart .cases .caseabord {
   /*padding: 50px 0;*/
-  border: solid 1px red;
+  /*border:solid 1px red;*/
   width: 350px;
   height: 100px;
-  margin: 100px -20px 100px -20px;
+  margin: 100px 0px 100px 0px;
   position: relative;
-  left: -6em;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,7 +681,7 @@ html, body, div, ul, ol, li, h1, h2, h3, h4, p, a {
   width: 350px;
   height: 100px;
   position: relative;
-  left: -8em;
+  left: -2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
