@@ -4,53 +4,310 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/design.css">
 </head>
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.9.1.min.js'></script>
+<script>
+$(function(){
+    var open = false;
+    $(".mwt_slider_scroll").hover(function(){
+        if(open === false){
+            $(".mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
+            open = true;
+        }else if(open === true){
+            $(".mwt_slider_scroll").animate( { left:'-100px' }, 600 ,'swing'); 
+            open = false;
+        }
+    }); 
+});
+
+let btn = document.getElementById("hamg");
+    let nav = document.getElementsByTagName("nav")[0];
+    let hT = document.getElementsByClassName("hamT")[0].style;
+    let hB = document.getElementsByClassName("hamB")[0].style;
+    let hM1 = document.getElementsByClassName("hamM")[0].style;
+    let hM2 = document.getElementsByClassName("hamM")[1].style;
+    btn.addEventListener('click',function(){
+        if(nav.style.display == "none" || nav.style.display == "") {
+          nav.style.display = "block";
+          hT.display = "none";
+          hB.display = "none";
+          hM1.transform = "rotate(30deg)";
+          hM2.transform = "rotate(-30deg)";
+          } else {
+            nav.style.display = "none";
+            hT.display = "block";
+            hB.display = "block";
+            hM1.transform = "rotate(0deg)";
+            hM2.transform = "rotate(0deg)";
+        }
+    })
+</script>
 <body>
-    <header class="grid-flex bgcolor-darkblue textcolor-white">
-        <h1 class="logo m-2 p-1">LOGO</h1>
+    <div class="mwt_slider_scroll">
+        <div class="mwt_tab">
+            <span>月</span>
+            <span>份</span>
+        </div>
+        <div class="mwt_slider_content">
+            <div class="all_month">
+                <p>2020</p>
+                <ul>
+                    <li><a href="#2020jan">01</a></li>
+                    <li><a href="#">02</a></li>
+                    <li><a href="#">03</a></li>
+                    <li><a href="#">04</a></li>
+                    <li><a href="#">05</a></li>
+                    <li><a href="#">06</a></li>
+                    <li><a href="#">07</a></li>
+                    <li><a href="#">08</a></li>
+                    <li><a href="#">09</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">11</a></li>
+                    <li><a href="#">12</a></li>
+                </ul>
+            </div>
+            <div class="all_month">
+                <p>2021</p>
+                <ul>
+                    <li><a href="#">01</a></li>
+                    <li><a href="#">02</a></li>
+                    <li><a href="#">03</a></li>
+                    <li><a href="#">04</a></li>
+                    <li><a href="#">05</a></li>
+                    <li><a href="#">06</a></li>
+                    <li><a href="#">07</a></li>
+                    <li><a href="#">08</a></li>
+                    <li><a href="#">09</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">11</a></li>
+                    <li><a href="#">12</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+      
+    <!--Leftline and header-->
+    <div class="leftline"></div>
+    <header>
+        <div class="logo">
+            <h1><a href="#top">武漢肺炎台灣疫情大事紀</a></h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">HOME</a></li>
+                <li><a href="#">感染來源國家統計</a></li>
+                <li><a href="#">相關連結</a></li>
+                <li><a href="#">關於</a></li>
             </ul>
         </nav>
-        <div id="ham" >
+        <div id="hamg">
             <div class="hamT"></div>
             <div class="hamM"></div>
             <div class="hamM"></div>
             <div class="hamB"></div>
         </div>
     </header>
-    <div class="slide">
-        <img src="https://picsum.photos/1600/500?random=1">
-        <img src="https://picsum.photos/1600/500?random=2">
-        <img src="https://picsum.photos/1600/500?random=3">
-        <img src="https://picsum.photos/1600/500?random=4">
-        <img src="https://picsum.photos/1600/500?random=5">
-    </div>
-    <div class="grid-1">
-        <h2 class="bgcolor-darkblue textcolor-white">ABOUT</h2>
-        <p class="textcolor-black">網路百萬零售速度面前一家，掌握紀念，打算精神詳細訊息有關部門，分析性別軟體打擊各國留下一路對手言論各類水溝明白，回應顯然風景本帖你看執法請求圖像化興奮不敢住宅居然結合，抓住家電工商無派之前廣場廣告公。</p>
-    </div>
-    <div class="grid-flex">
-        <div class="grid-3">
-            <h3 class="bgcolor-darkblue textcolor-white">TITLE</h3>
-            <p>以及深刻同步專利稿件配件全文興趣建材按照個人，貫徹一陣免費電影怎樣到了，檔案身影頁面，抽菸區英國減。</p>
+
+    <div id="content">
+        
+        <!--PageHOME:caculation-->    
+        <div class="home" id="top">
+                <div class="grid-1 grid-flex">
+                    <div class="grid-3">
+                        <p>確診案例<br>
+                        <span style="color:#e76f51; font-size: 64px;">720</span>人</p>
+                    </div>
+                    <div class="grid-3">
+                        <p>死亡人數
+                            <br>
+                        <span style="color:#e76f51; font-size: 64px;">7</span>人</p>
+                    </div>
+                    <div class="grid-3">
+                        <p><span style="font-size:20px;">統計至2020年N月N日為止</span>
+                            <br>境外移入：N例
+                            <br>本土感染：N例
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-1 grid-flex">
+                    <div class="from"></div>
+                    <div class="from">
+                        <p>資料來源：衛服部</p>
+                    </div>
+                    <div class="from">
+                        <p>統計至X年X月X日止</p>
+                    </div>
+                </div>
         </div>
-        <div class="grid-3">
-            <h3 class="bgcolor-darkblue textcolor-white">TITLE</h3>
-            <p>劇情彼此動作意義，添加公主用品估計很有網際快車，記住中心，工廠微笑回覆更多，算。</p>
+
+        <!--2020/01-->    
+        <div class="grid-1 grid-flex">
+            
+            <!--月份-->
+            <div class="countpart"  id="2020jan">
+                <p>1月</p>                
+            </div>
+                
+            <!--個案資料start -->
+            <div class="casepart">
+
+                <!--個案1-->
+                <div class="cases">
+                    <div class="caseabord">
+                        <div class="point"></div>
+                        <div class="line"></div>
+                        <div class="num">1</div>
+                        <ul>
+                           <li>年齡：50+歲</li>
+                            <li>性別：女</li>
+                            <li>返台前地點：武漢</li>
+                            <li>返台日期：1/20</li>
+                            <li>確診日期：1/21</li>              
+                        </ul>
+                    </div>
+                    
+                </div>    
+
+                <!--個案2-->
+                <div class="cases">      
+                    <div class="caseabord">
+                        <div class="point"></div>
+                        <div class="line"></div>
+                        <div class="num">2</div>
+                        <ul>
+                            <li>年齡：50+歲</li>
+                            <li>性別：女</li>
+                            <li>返台前地點：中國</li>
+                            <li>返台日期：1/21</li>
+                            <li>確診日期：1/23</li>              
+                        </ul>
+                    </div>
+                </div>  
+
+                <!--個案3-->
+                <div class="cases">
+                    <div class="caseabord">
+                        <div class="point"></div>
+                        <div class="line"></div>
+                        <div class="num">3</div>
+                       <ul>
+                            <li>年齡：50+歲</li>
+                            <li>性別：男</li>
+                            <li>返台前地點：武漢</li>
+                            <li>返台日期：1/21</li>
+                            <li>確診日期：1/24</li>              
+                        </ul>
+                    </div>
+                </div>
+                
+                <!--個案4-->    
+                <div class="cases">
+                    <div class="caseabord">
+                        <div class="point"></div>
+                        <div class="line"></div>
+                        <div class="num">4</div>
+                        <ul>
+                            <li>年齡：50+歲</li>
+                            <li>性別：女</li>
+                            <li>返台前地點：武漢</li>
+                            <li>返台日期：1/16</li>
+                             <li>確診日期：1/26</li>              
+                        </ul>
+                        
+                    </div>
+                </div>
+
+                <!--個案5.8同一感染源-->    
+                <div class="cases">
+                    <!--個案5-->
+                    <div class="caseabord">
+                        <div class="point"></div>
+                        <div class="line"></div>
+                        <div class="num">5</div>
+                        <ul>
+                            <li>年齡：50+歲</li>
+                            <li>性別：女</li>
+                            <li>返台前地點：武漢</li>
+                            <li>返台日期：1/20</li>
+                            <li>確診日期：1/27</li>              
+                        </ul>
+                    </div>
+                    <!--個案8-->
+                    <div class="caselocal">
+                        <div class="point"></div>
+                        <div class="line"></div>
+                        <div class="num">8</div>
+                        <ul>
+                            <li>年齡：50+歲</li>
+                            <li>性別：男</li>
+                            <li>感染途徑：案5</li>
+                            <li>確診日期：1/28</li>              
+                        </ul>
+                    </div>                   
+                </div>
+
+                <!--個案6.7同一感染源-->    
+                <div class="cases">
+                    <!--個案6-->
+                    <div class="caseabord">
+                        <div class="point"></div>
+                        <div class="line"></div>
+                        <div class="num">6</div>
+                        <ul>
+                            <li>年齡：70+歲</li>
+                            <li>性別：女</li>
+                            <li>返台前地點：武漢</li>
+                            <li>返台日期：1/22</li>
+                            <li>確診日期：1/28</li>              
+                        </ul>
+                    </div>
+                    <!--個案7-->
+                    <div class="caseabord2">
+                        <div class="point"></div>
+                        <div class="line"></div>
+                        <div class="num">7</div>
+                        <ul>
+                            <li>年齡：70+歲</li>
+                            <li>性別：女</li>
+                            <li>返台前地點：武漢</li>
+                            <li>返台日期：1/22</li>
+                            <li>確診日期：1/28</li>              
+                        </ul>
+                    </div>                   
+                </div>
+                
+                <!--個案9.10同一感染源-->    
+                <div class="cases">
+                    <!--個案10-->
+                    <div class="caseabord">
+                        <div class="point"></div>
+                        <div class="line"></div>
+                        <div class="num">10</div>
+                        <ul>
+                            <li>年齡：40+歲</li>
+                            <li>性別：男</li>
+                            <li>返台前地點：武漢</li>
+                            <li>返台日期：-</li>
+                            <li>確診日期：1/31</li>              
+                        </ul>
+                    </div>
+                    <!--個案9-->
+                    <div class="caselocal">
+                        <div class="point"></div>
+                        <div class="line"></div>
+                        <div class="num">9</div>
+                        <ul>
+                            <li>年齡：40+歲</li>
+                            <li>性別：女</li>
+                            <li>感染途徑：10</li>
+                            <li>確診日期：1/30</li>              
+                        </ul>
+                    </div>                   
+                </div>
+
+            </div>   
         </div>
-        <div class="grid-3">
-            <h3 class="bgcolor-darkblue textcolor-white">TITLE</h3>
-            <p>怎麼會空間你想信心重點幸福輕鬆讓我們會不會全體，超市軍隊做出我把，購買擴大反應難得，提示。</p>
-        </div>
-    </div>
-    <div class="btn">
-        <a href="#">CLICK</a>
     </div>
 </body>
 </html>
