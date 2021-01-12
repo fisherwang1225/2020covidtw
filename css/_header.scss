@@ -1,0 +1,31 @@
+header{
+    width: 100%;
+    position: fixed;
+    top:0; right:0;
+    background-color: #264653;
+    color:#FFF;
+    z-index: 99;
+    display: flex; justify-content: flex-end;
+    .logo{
+        width: 40%;
+        font-size: 16px; font-weight: 500;
+        padding:10px;
+    }
+    #menu{
+        width: 60%;
+        padding:10px;
+        nav{
+            ul{
+                position: relative;
+                display: flex; justify-content: flex-end;
+                li{
+                    display: block;
+                    a{
+                        display: block;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

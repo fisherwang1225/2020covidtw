@@ -9,7 +9,7 @@ html, body, div, ul, ol, li, h1, h2, h3, h4, p, a{
     text-align: justify;
 }
 
-@import "default","content","nav","weeks";
+@import "content","header","weeks";
 
 .grid-flex{ 
     display: flex;justify-content: space-around; align-items: top;
@@ -38,7 +38,7 @@ html, body, div, ul, ol, li, h1, h2, h3, h4, p, a{
    /* @include menupc; */
     @for $g from 3 through 6 {
         .grid-#{$g}{
-            width:calc(100% / 3);
+            width:calc(100% / 3.5);
         }
         
     }

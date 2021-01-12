@@ -5,109 +5,14 @@ html{
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-html h1{
-    color:#264653;
-    font-size: 48px;font-weight: 900;
-}
 
 .leftline{
     border-right: 0.7em solid #e9c46a;
     /* Positioned at the left */
-    left: 3em;
+    left: 50px;
     position: fixed;
     top: 0px;
     /* Take full height */
     height: 100%;
 }
 
-
-header{
-    /* Used to position the left vertical line */
-    position: relative;
-    text-align: 50px;
-    left:100px;
-    width:80%; height: 120vh;
-    display: flex; flex-direction:column; justify-content: space-around;
-}
-header .grid-1{
-    margin-bottom:10em;
-    margin-left: 2em;
-    display: flex; align-items: center;
-}
-
-header h1{
-    margin:em;
-}
-
-header p{
-    font-size:30px;
-    }
-
-#mwt_mwt_slider_scroll{
- top: 0;
- left:-150px;
- width:150px; 
- position:fixed;
- z-index:9999;
- position:relative;
-}
-#mwt_slider_content{
- background:#264653;
- color:#ffffff;
- text-align:center;
- padding-top:20px;
- height:500px;
- display: flex; 
-}
-#mwt_fb_tab {
- position:absolute;
- top:0px;
- right:-24px;
- width:24px;
- height:500px;
- background:#264653;
- color:#ffffff;
- text-align:center;
- padding:9px 0;
- -moz-border-radius-topright:10px;
- -moz-border-radius-bottomright:10px;
- -webkit-border-top-right-radius:10px;
--webkit-border-bottom-right-radius:10px; 
-}
-#mwt_fb_tab span {
- display:block;
- height:18px;
- padding:1px 0;
- line-height:18px;
- text-transform:uppercase;
- font-size:18px;
-}
-
-.all_month{
-    width: 30px; height: 20px;
-    color: #264653;
-    margin: 10px;
-}
-.all_month p{
-    color: #e9c46a;
-    margin: 5px;
-}
-.all_month ul{
-    widows: 20px; height: 15px;
-    text-align: center;
-}
-.all_month ul li{
-    background-color: #e9c46a;
-    padding: 2px; margin: 2px;
-    display: block;
-
-
-}
-.all_month a{
-    display: block;
-}
-
-.all_month li:hover{
-    background-color: #f4a261;
-    color: #ffffff;
-}

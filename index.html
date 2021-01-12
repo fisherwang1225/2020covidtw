@@ -4,34 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css\style.css">
-    <link rel="stylesheet" href="css\design.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/design.css">
 </head>
 <script type='text/javascript' src='https://code.jquery.com/jquery-1.9.1.min.js'></script>
 <script>
 $(function(){
- var w = $("#mwt_slider_content").width();
- $('#mwt_slider_content').css('height', ($(window).height(500) - 20) + 'px' ); 
- 
- $("#mwt_fb_tab").mouseover(function(){
-  if ($("#mwt_mwt_slider_scroll").css('left') == '-'+w+'px')
-  {
-   $("#mwt_mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
-  }
- }); 
- 
- $("#mwt_slider_content").mouseleave(function(){
-  $("#mwt_mwt_slider_scroll").animate( { left:'-'+w+'px' }, 600 ,'swing'); 
- }); 
+    var open = false;
+    $(".mwt_slider_scroll").hover(function(){
+        if(open === false){
+            $(".mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
+            open = true;
+        }else if(open === true){
+            $(".mwt_slider_scroll").animate( { left:'-100px' }, 600 ,'swing'); 
+            open = false;
+        }
+    }); 
 });
 </script>
 <body>
-    <div id="mwt_mwt_slider_scroll">
-        <div id="mwt_fb_tab">
+    <div class="mwt_slider_scroll">
+        <div class="mwt_tab">
             <span>月</span>
             <span>份</span>
         </div>
-        <div id="mwt_slider_content">
+        <div class="mwt_slider_content">
             <div class="all_month">
                 <p>2020</p>
                 <ul>
@@ -69,47 +66,61 @@ $(function(){
         </div>
     </div>
       
-    <!--Leftline and menu-->
+    <!--Leftline and header-->
     <div class="leftline"></div>
-    <div id="menu">
-        <nav>
-            <ul>
-                <li><a href="#">感染來源國家統計</a></li>
-                <li><a href="#">相關連結</a></li>
-                <li><a href="#">關於</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <!--PageHOME:caculation-->
     <header>
-        <h1>武漢肺炎<br>台灣疫情大事紀</h1>
-        <div class="grid-1">
-            <div class="grid-3">
-                <p>確診案例<br>
-                <span style="color:#e76f51; font-size: 64px;">720</span>人</p>
-            </div>
-            <div class="grid-3">
-                <p>死亡人數
-                    <br>
-                <span style="color:#e76f51; font-size: 64px;">7</span>人</p>
-            </div>
-            <div class="grid-3">
-                <p><span style="font-size:20px;">統計至2020年N月N日為止</span>
-                    <br>境外移入：N例
-                    <br>本土感染：N例
-                </p>
-            </div>
+        <div class="logo">
+            <h1><a href="#">武漢肺炎台灣疫情大事紀</a></h1>
+        </div>
+        <div id="menu"> 
+            <nav>
+                <ul>
+                    <li><a href="#">感染來源國家統計</a></li>
+                    <li><a href="#">相關連結</a></li>
+                    <li><a href="#">關於</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!--2020/01-->
-    <div class="grid-1">
-        <div id="content">
+    <div id="content">
+        
+        <!--PageHOME:caculation-->    
+        <div class="home">
+                <div class="grid-1 grid-flex">
+                    <div class="grid-3">
+                        <p>確診案例<br>
+                        <span style="color:#e76f51; font-size: 64px;">720</span>人</p>
+                    </div>
+                    <div class="grid-3">
+                        <p>死亡人數
+                            <br>
+                        <span style="color:#e76f51; font-size: 64px;">7</span>人</p>
+                    </div>
+                    <div class="grid-3">
+                        <p><span style="font-size:20px;">統計至2020年N月N日為止</span>
+                            <br>境外移入：N例
+                            <br>本土感染：N例
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-1 grid-flex">
+                    <div class="from"></div>
+                    <div class="from">
+                        <p>資料來源：衛服部</p>
+                    </div>
+                    <div class="from">
+                        <p>統計至X年X月X日止</p>
+                    </div>
+                </div>
+        </div>
+
+        <!--2020/01-->    
+        <div class="grid-1 grid-flex">
             
             <!--月份-->
             <div class="countpart">
-                <p><span>1月</span></p>                
+                <p>1月</p>                
             </div>
                 
             <!--個案資料start -->
@@ -226,7 +237,7 @@ $(function(){
                         </ul>
                     </div>
                     <!--個案7-->
-                    <div class="caseabord">
+                    <div class="caseabord2">
                         <div class="point"></div>
                         <div class="line"></div>
                         <div class="num">7</div>
