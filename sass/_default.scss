@@ -1,0 +1,25 @@
+@for $p from 1 through 10{
+    .p-#{$p}{
+        padding: calc(1em*$p);
+    }
+}
+
+@for $m from 1 through 10{
+    .m-#{$m}{
+        margin: calc(1em*$m);
+    }
+}
+
+$colors: black, white, red ,darkred, pink, orange, darkorange, lightyellow, yellow, lightgreen, green, darkgreen, lightblue, blue, darkblue, purple, brown, gray  ;
+
+@each $color in $colors{
+    .textcolor-#{$color}{
+        color: $color;
+    }
+}
+
+@each $color in $colors{
+    .bgcolor-#{$color}{
+        background-color: $color;
+    }
+}
