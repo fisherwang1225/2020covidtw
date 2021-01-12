@@ -20,29 +20,22 @@ $(function(){
             open = false;
         }
     }); 
-});
 
-let btn = document.getElementById("hamg");
+    let btn = document.getElementById("hamg");
     let nav = document.getElementsByTagName("nav")[0];
-    let hT = document.getElementsByClassName("hamT")[0].style;
-    let hB = document.getElementsByClassName("hamB")[0].style;
-    let hM1 = document.getElementsByClassName("hamM")[0].style;
-    let hM2 = document.getElementsByClassName("hamM")[1].style;
     btn.addEventListener('click',function(){
+        console.log('click');
         if(nav.style.display == "none" || nav.style.display == "") {
           nav.style.display = "block";
-          hT.display = "none";
-          hB.display = "none";
-          hM1.transform = "rotate(30deg)";
-          hM2.transform = "rotate(-30deg)";
+          
           } else {
             nav.style.display = "none";
-            hT.display = "block";
-            hB.display = "block";
-            hM1.transform = "rotate(0deg)";
-            hM2.transform = "rotate(0deg)";
+        
         }
-    })
+    });
+});
+
+    
 </script>
 <body>
     <div class="mwt_slider_scroll">
@@ -96,9 +89,9 @@ let btn = document.getElementById("hamg");
         </div>
         <nav>
             <ul>
-                <li><a href="#">感染來源國家統計</a></li>
-                <li><a href="#">相關連結</a></li>
-                <li><a href="#">關於</a></li>
+                <li><a href="country.html">感染來源國家統計</a></li>
+                <li><a href="link.html">相關連結</a></li>
+                <li><a href="about.html">關於</a></li>
             </ul>
         </nav>
         <div id="hamg">

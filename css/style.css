@@ -24,6 +24,45 @@ html, body, div, ul, ol, li, h1, h2, h3, h4, p, a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  background-color: #2a9d8f;
+  margin: 100px;
+}
+
+#content h2 {
+  color: #e9c46a;
+  font-size: 28px;
+}
+
+#content img {
+  margin: 0 auto;
+  height: 80%;
+  width: 80%;
+}
+
+#content ul {
+  width: 100%;
+  text-align: left;
+}
+
+#content ul li {
+  display: inline-block;
+  background-color: #e9c46a;
+  color: #FFF;
+}
+
+#content ul li a {
+  display: block;
+  padding: 10px;
+}
+
+#content ul li:hover a {
+  background-color: #f4a261;
+  color: #000;
+}
+
+#content p {
+  line-height: 1.5;
+  font-size: 20px;
 }
 
 #content .home {
@@ -127,7 +166,7 @@ html, body, div, ul, ol, li, h1, h2, h3, h4, p, a {
 }
 
 #content .grid-1 .casepart .cases .caseabord .line {
-  width: 100px;
+  width: 80px;
   height: 10px;
   background-color: #e9c46a;
 }
@@ -203,7 +242,7 @@ html, body, div, ul, ol, li, h1, h2, h3, h4, p, a {
 }
 
 #content .grid-1 .casepart .cases .caseabord2 .line {
-  width: 100px;
+  width: 80px;
   height: 10px;
   background-color: #e9c46a;
 }
@@ -277,7 +316,7 @@ html, body, div, ul, ol, li, h1, h2, h3, h4, p, a {
 }
 
 #content .grid-1 .casepart .cases .caselocal .line {
-  width: 100px;
+  width: 80px;
   height: 10px;
   background-color: #f4a261;
 }
@@ -421,9 +460,6 @@ html, body, div, ul, ol, li, h1, h2, h3, h4, p, a {
 }
 
 @media only screen and (min-width: 320px) {
-  nav {
-    display: none;
-  }
   header {
     position: fixed;
     top: 0;

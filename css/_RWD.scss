@@ -1,0 +1,13 @@
+@mixin RWD{
+    header{
+        nav{
+            display: none;
+            a{
+                text-align: center;
+            }
+        }
+        .logo{
+            font-size: 10px; 
+        }
+    }
+}
